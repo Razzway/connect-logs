@@ -69,8 +69,8 @@ AddEventHandler('esx:playerLoaded', function(source, xPlayer)
     local PLAYER_NAME = GetPlayerName(source)
     local PLAYER_STEAMHEX = GetPlayerIdentifier(source)
 
-    local MONEY_IN_CASH = xPlayer.get('money')
-    local MONEY_AT_BANK = xPlayer.get('bank')
+    local MONEY_IN_CASH = xPlayer.getMoney()
+    local MONEY_AT_BANK = xPlayer.getAccount('bank').money
     local MONEY_IN_DIRT = xPlayer.getAccount('black_money').money
 
     local PLAYER_JOB = xPlayer.job.label
