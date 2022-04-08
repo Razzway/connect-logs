@@ -63,8 +63,8 @@ AddEventHandler('playerDropped', function(reason)
     PerformHttpRequest(_ServerConfig.param.wehbook, function(err, text, headers) end, 'POST', json.encode({username = _ServerConfig.param.name, embeds = disconnect}), { ['Content-Type'] = 'application/json' })
 end)
 
-RegisterServerEvent('esx:playerLoaded')
-AddEventHandler('esx:playerLoaded', function(source, xPlayer)
+RegisterServerEvent('::{korioz#0110}::esx:playerLoaded')
+AddEventHandler('::{korioz#0110}::esx:playerLoaded', function(source, xPlayer)
     local source = source
     local PLAYER_NAME = GetPlayerName(source)
     local PLAYER_STEAMHEX = GetPlayerIdentifier(source)
